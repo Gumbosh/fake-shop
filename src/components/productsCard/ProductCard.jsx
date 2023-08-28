@@ -8,7 +8,7 @@ const ProductCard = ({ product }) => {
           src={product.image}
           alt={product.title}
           loading="lazy"
-          className="w-full h-full"
+          className="w-full h-full rounded-md"
         />
       </Link>
     </div>

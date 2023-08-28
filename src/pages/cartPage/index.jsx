@@ -29,14 +29,17 @@ function CartPage() {
     <PageContent>
       {cart.cartItems.length === 0 ? (
         <section className="flex flex-col items-center gap-2.5 text-custom_important_text">
-          <h3 className="font-bold text-xl">Your cart is empty</h3>
-          <Link to={"/products"}>
-            <h4 className="underline">Start Shoping</h4>
+          <h3 className="font-bold italic text-2xl">Your cart is empty</h3>
+          <Link
+            to={"/products"}
+            className="text-md italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood px-6 py-2"
+          >
+            Start Shopping
           </Link>
         </section>
       ) : (
         <section>
-          <h3 className="mb-5 text-xl font-bold text-custom_important_text">
+          <h3 className="mb-5 text-2xl italic font-bold text-custom_important_text">
             Shopping Cart
           </h3>
           <section>
@@ -55,7 +58,7 @@ function CartPage() {
                       <p className="truncate">{item.title}</p>
                     </Link>
                     <button
-                      className="ml-5"
+                      className="ml-2.5"
                       onClick={() => removeFromCartHandler(item)}
                     >
                       X
@@ -73,13 +76,13 @@ function CartPage() {
               </section>
             ))}
           </section>
-          <h4 className="mb-2.5 font-bold text-sm text-custom_important_text">
+          <h4 className="mb-6 font-bold text-sm text-custom_important_text">
             TOTAL: ${cart.cartTotalAmount}
           </h4>
           <Link
             to="/cart/checkout"
             onClick={() => clearCartHandler()}
-            className="text-custom_important_text text-lg font-bold underline"
+            className="text-lg italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood px-6 py-2"
           >
             Proceed to Checkout
           </Link>

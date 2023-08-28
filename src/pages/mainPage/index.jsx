@@ -1,4 +1,4 @@
-import MainPageLayout from "../../layout/MainPageLayout";
+import PageLayout from "../../layout/PageLayout";
 import FeaturedSection from "./FeaturedSection";
 import DualImageSection from "./DualImageSection";
 import ImageCard from "./ImageCard";
@@ -13,14 +13,12 @@ import electronicsSecondImage from "../../assets/images/electronics-2.jpg";
 
 const MainPage = () => {
   return (
-    <MainPageLayout>
+    <PageLayout>
       {/* <FeaturedSection/> - Header Section with a customizable link (linkTo prop) and content in tag. */}
       <FeaturedSection linkTo={"/products/electronics"}>
-        <h2 className="flex flex-col items-center italic">
-          <span>Discover a Digital Revolution</span>
-          <span className="font-bold text-xl text-custom_important_text">
-            Electronics Now Live
-          </span>
+        <h2 className="flex flex-col italic text-custom_important_text items-center">
+          <span className="text-lg">Discover a Digital Revolution</span>
+          <span className="font-bold text-xl ">Electronics Now Live</span>
         </h2>
       </FeaturedSection>
       {/* <DualImageSection/> holds two <ImageCard/> components. */}
@@ -100,7 +98,7 @@ const MainPage = () => {
       Once this process is completed, the global state from the newsletterSlice (submitted) is changed to true,
       causing this section to render the <NewsletterSuccess/> component instead of the <NewsletterForm/>. */}
       <NewsletterSection />
-    </MainPageLayout>
+    </PageLayout>
   );
 };
 

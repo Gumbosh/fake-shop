@@ -44,7 +44,7 @@ const ProductsPage = () => {
   return (
     <PageContent>
       <section className="flex flex-col items-center">
-        <h2 className="text-center text-custom_important_text mb-5 text-xl font-bold capitalize">
+        <h2 className="text-center text-custom_important_text mb-5 text-2xl italic font-bold capitalize">
           {productsCategory}
         </h2>
         {isLoading ? (

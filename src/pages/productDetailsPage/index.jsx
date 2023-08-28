@@ -36,12 +36,15 @@ const ProductDetailsPage = () => {
               className="h-[600px] md:h-[400px] w-full object-fill"
             />
           </article>
-          <article className="flex flex-col gap-8 flex-1 text-xs">
-            <h2 className="font-bold text-base text-custom_important_text">
+          <article className="flex flex-col gap-6 flex-1 text-xs">
+            <h2 className="font-bold text-xl italic text-custom_important_text">
               {product.title}
             </h2>
-            <p className="font-bold text-base text-custom_important_text">
-              {`$${product.price.toFixed(2)}`}
+            <p className="text-sm">
+              <span className="font-bold text-custom_important_text">
+                DESCRIPTION:{" "}
+              </span>
+              <span>{product.description}</span>
             </p>
             <p>
               <span className="font-bold text-custom_important_text">
@@ -49,14 +52,12 @@ const ProductDetailsPage = () => {
               </span>
               <span className="capitalize">{product.category}</span>
             </p>
-            <p>
-              <span className="font-bold  text-custom_important_text">
-                DESCRIPTION:{" "}
-              </span>
-              <span>{product.description}</span>
+            <p className="font-bold text-lg text-custom_important_text">
+              {`$${product.price.toFixed(2)}`}
             </p>
+
             <button
-              className="underline text-base text-start text-custom_important_text"
+              className="text-base italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood py-2"
               onClick={() => handleAddToCart(product)}
             >
               Add To Cart

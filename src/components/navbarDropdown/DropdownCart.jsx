@@ -34,15 +34,18 @@ const DropdownCart = () => {
   return (
     <DropdownTemplate>
       {cart.cartItems.length === 0 ? (
-        <section className="text-center text-custom_important_text">
-          <h3 className="font-bold text-xl mb-2.5">Your cart is empty</h3>
-          <Link to={"/products"} onClick={closeDropdownHandler}>
-            <h4 className="underline">Start Shoping</h4>
+        <section className="flex flex-col items-center gap-2.5 text-custom_important_text">
+          <h3 className="font-bold italic text-2xl">Your cart is empty</h3>
+          <Link
+            to={"/products"}
+            className="text-md italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood px-6 py-2"
+          >
+            Start Shopping
           </Link>
         </section>
       ) : (
         <section>
-          <h3 className="text-xl font-bold mb-5 text-custom_important_text">
+          <h3 className="text-2xl italic font-bold mb-5 text-custom_important_text">
             Shopping Cart
           </h3>
           <section className="max-h-[228px] overflow-y-auto overflow-x-hidden">
@@ -83,16 +86,16 @@ const DropdownCart = () => {
               </section>
             ))}
           </section>
-          <h4 className="mb-5 font-bold text-sm text-custom_important_text">
+          <h4 className="mb-6 font-bold text-sm text-custom_important_text">
             TOTAL: ${cart.cartTotalAmount}
           </h4>
-          <div className="text-center">
-            <Link to="/cart" onClick={closeDropdownHandler}>
-              <h3 className="text-xl underline font-bold text-custom_important_text">
-                Go to Shopping Cart
-              </h3>
-            </Link>
-          </div>
+          <Link
+            to="/cart"
+            onClick={closeDropdownHandler}
+            className="text-lg italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood px-6 py-2"
+          >
+            Go to Shopping Cart
+          </Link>
         </section>
       )}
     </DropdownTemplate>

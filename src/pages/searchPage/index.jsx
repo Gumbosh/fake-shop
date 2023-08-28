@@ -6,7 +6,7 @@ const SearchPage = () => {
   const results = useSelector((state) => state.search.results);
   return (
     <PageContent>
-      <h2 className="text-custom_important_text mb-5 text-xl font-bold">
+      <h2 className="text-custom_important_text mb-5 text-2xl italic font-bold">
         Search Results:
       </h2>
       {results.length > 0 ? (

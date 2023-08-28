@@ -29,7 +29,7 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="flex flex-col m-auto bg-custom_champagne_pink w-3/4 p-5 mb-20">
+    <section className="flex flex-col m-auto bg-custom_champagne_pink shadow-lg w-3/4 p-5 mb-20">
       {!submitted ? (
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <label htmlFor="email" className="md:text-center">

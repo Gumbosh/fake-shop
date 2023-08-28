@@ -19,10 +19,10 @@ const NavbarIcons = () => {
           activeDropdown === "search" ? null : "search"
         )}
       >
-        <CiSearch />
+        <CiSearch className="text-xl" />
       </li>
       <li
-        className="flex gap-1 cursor-pointer"
+        className="flex items-center gap-1 text-xl cursor-pointer"
         onClick={setActiveDropdownHandler(
           activeDropdown === "cart" ? null : "cart"
         )}
@@ -36,7 +36,7 @@ const NavbarIcons = () => {
           activeDropdown === "menu" ? null : "menu"
         )}
       >
-        <CiMenuBurger />
+        <CiMenuBurger className="text-lg" />
       </li>
     </>
   );

@@ -20,21 +20,22 @@ const BestItemsSection = ({ title, description, linkTo, category }) => {
     .slice(0, 4);
 
   return (
-    <section className="flex flex-col gap-8 items-center mb-20">
+    <section className="flex flex-col gap-6 items-center mb-20">
       <article className="flex flex-col items-center text-center ">
-        <h3 className="font-bold text-custom_important_text">{title}</h3>
+        <h3 className="font-bold text-xl italic text-custom_important_text">
+          {title}
+        </h3>
         <p className="text-sm">{description}</p>
       </article>
       {isLoading ? (
         <p>loading...</p>
       ) : (
-        <section className="grid gap-5 justify-center grid-cols-4 lg:grid-cols-2 sm:grid-cols-1 items-center ">
+        <section className="grid gap-5 justify-center grid-cols-4 lg:grid-cols-2 sm:grid-cols-1 items-center">
           {topProducts.map((item) => (
             <ProductCard key={item.id} product={item} />
           ))}
         </section>
       )}
-
       <ShopNowLink linkTo={linkTo} />
     </section>
   );

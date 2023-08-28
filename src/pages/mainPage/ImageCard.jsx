@@ -14,8 +14,10 @@ const ImageCard = ({ linkTo, image, alt, title, description }) => {
       </Link>
       <section className="flex flex-col mt-2">
         <h3 className="font-bold text-custom_important_text">{title}</h3>
-        <p className="text-sm">{description}</p>
-        <ShopNowLink linkTo={linkTo} />
+        <p className="text-sm mb-2">{description}</p>
+        <article>
+          <ShopNowLink linkTo={linkTo} />
+        </article>
       </section>
     </article>
   );
