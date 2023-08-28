@@ -1,9 +1,10 @@
-#FAKE SHOP
+# FAKE SHOP
+
 Welcome to my Fake Shop - a dummy e-commerce website built for practice purposes.
 
-**Check out the live demo: ** [gw-fakeshop.netlify.app](https://gw-fakeshop.netlify.app)
+**Check out the live demo:** [gw-fakeshop.netlify.app](https://gw-fakeshop.netlify.app)
 
-##Technologies Used:
+## Technologies Used:
 
 - Vite / React.js
 - TailwindCSS
@@ -14,7 +15,7 @@ Welcome to my Fake Shop - a dummy e-commerce website built for practice purposes
 - YUP
 - Lodash
 
-##Features:
+## Features:
 
 - Items sourced from [fakestoreapi.com](https://fakestoreapi.com).
 - User-friendly navbar with dropdowns.
@@ -22,7 +23,8 @@ Welcome to my Fake Shop - a dummy e-commerce website built for practice purposes
 - Fully functional shopping cart (excluding payment).
 - Newsletter subscription with email validation.
 
-##Run Locally
+## Run Locally
+
 **1. Clone The Repository**
 
 `git clone https://github.com/Gumbosh/fake-shop.git`
