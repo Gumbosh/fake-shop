@@ -14,6 +14,7 @@ const NavbarIcons = () => {
   return (
     <>
       <li
+        className="cursor-pointer"
         onClick={setActiveDropdownHandler(
           activeDropdown === "search" ? null : "search"
         )}
@@ -21,7 +22,7 @@ const NavbarIcons = () => {
         <CiSearch />
       </li>
       <li
-        className="flex gap-1"
+        className="flex gap-1 cursor-pointer"
         onClick={setActiveDropdownHandler(
           activeDropdown === "cart" ? null : "cart"
         )}
@@ -30,7 +31,7 @@ const NavbarIcons = () => {
         <span className="text-xs">{cartTotalQuantity}</span>
       </li>
       <li
-        className="hidden lg:block"
+        className="hidden lg:block cursor-pointer"
         onClick={setActiveDropdownHandler(
           activeDropdown === "menu" ? null : "menu"
         )}

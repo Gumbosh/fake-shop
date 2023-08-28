@@ -14,7 +14,7 @@ const Navbar = () => {
           {/* Links to subpages. */}
           <NavbarLinks />
         </ul>
-        <ul className="ml-auto mr-5 flex gap-2.5 cursor-pointer text-custom_important_text">
+        <ul className="ml-auto mr-5 flex gap-2.5 text-custom_important_text">
           {/* Icons that render dropdown content on click. */}
           <NavbarIcons />
         </ul>
