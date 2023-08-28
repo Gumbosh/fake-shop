@@ -9,6 +9,7 @@ import {
   addToCart,
   clearCart,
 } from "../../features/cartSlice";
+import { CgRemove } from "react-icons/cg";
 
 function CartPage() {
   const dispatch = useDispatch();
@@ -19,7 +20,7 @@ function CartPage() {
   };
   const decreaseCartHandler = (cartItem) => dispatch(decreaseCart(cartItem));
   const increaseQuantityHandler = (cartItem) => dispatch(addToCart(cartItem));
-  const clearCartHandler = (cartItem) => dispatch(clearCart());
+  const clearCartHandler = () => dispatch(clearCart());
 
   useEffect(() => {
     dispatch(getTotals());
@@ -61,7 +62,7 @@ function CartPage() {
                       className="ml-2.5"
                       onClick={() => removeFromCartHandler(item)}
                     >
-                      X
+                      <CgRemove className="text-lg" />
                     </button>
                   </div>
                   <div className="flex gap-2 text-base items-center">

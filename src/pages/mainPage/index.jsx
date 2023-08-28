@@ -17,8 +17,12 @@ const MainPage = () => {
       {/* <FeaturedSection/> - Header Section with a customizable link (linkTo prop) and content in tag. */}
       <FeaturedSection linkTo={"/products/electronics"}>
         <h2 className="flex flex-col italic text-custom_important_text items-center">
-          <span className="text-lg">Discover a Digital Revolution</span>
-          <span className="font-bold text-xl ">Electronics Now Live</span>
+          <span className="text-xl md:text-lg">
+            Discover a Digital Revolution
+          </span>
+          <span className="font-bold text-2xl md:text-xl">
+            Electronics Now Live
+          </span>
         </h2>
       </FeaturedSection>
       {/* <DualImageSection/> holds two <ImageCard/> components. */}

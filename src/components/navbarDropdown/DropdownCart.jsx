@@ -9,6 +9,7 @@ import {
   decreaseCart,
   addToCart,
 } from "../../features/cartSlice";
+import { CgRemove } from "react-icons/cg";
 
 const DropdownCart = () => {
   const dispatch = useDispatch();
@@ -38,6 +39,7 @@ const DropdownCart = () => {
           <h3 className="font-bold italic text-2xl">Your cart is empty</h3>
           <Link
             to={"/products"}
+            onClick={closeDropdownHandler}
             className="text-md italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood px-6 py-2"
           >
             Start Shopping
@@ -71,7 +73,7 @@ const DropdownCart = () => {
                       className="ml-2.5"
                       onClick={() => removeFromCartHandler(item)}
                     >
-                      X
+                      <CgRemove className="text-lg" />
                     </button>
                   </div>
                   <div className="flex gap-2 text-base items-center">
