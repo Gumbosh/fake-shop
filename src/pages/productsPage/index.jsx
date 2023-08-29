@@ -31,7 +31,9 @@ const ProductsPage = () => {
   } else {
     return (
       <PageContent>
-        <h2 className="text-center">No such directory</h2>
+        <h2 className="text-center text-2xl italic font-bold">
+          {`There is no category named "${category}"`}
+        </h2>
       </PageContent>
     );
   }

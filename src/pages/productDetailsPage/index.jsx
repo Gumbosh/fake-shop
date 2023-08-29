@@ -23,6 +23,16 @@ const ProductDetailsPage = () => {
     dispatch(setActiveDropdown("cart"));
   };
 
+  if (!isLoading && !product) {
+    return (
+      <PageContent>
+        <h2 className="text-center text-2xl italic font-bold">
+          {`There is no item with id: "${id}"`}
+        </h2>
+      </PageContent>
+    );
+  }
+
   return (
     <PageContent>
       {isLoading ? (
