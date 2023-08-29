@@ -27,7 +27,7 @@ const ProductDetailsPage = () => {
     return (
       <PageContent>
         <h2 className="text-center text-2xl italic font-bold">
-          {`There is no item with id: "${id}"`}
+          {`There is no item with id: ${id}`}
         </h2>
       </PageContent>
     );

@@ -32,7 +32,7 @@ const ProductsPage = () => {
     return (
       <PageContent>
         <h2 className="text-center text-2xl italic font-bold">
-          {`There is no category named "${category}"`}
+          {`There is no category named: ${category}`}
         </h2>
       </PageContent>
     );
