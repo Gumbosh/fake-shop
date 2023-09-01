@@ -43,7 +43,7 @@ const ProductDetailsPage = () => {
             <img
               src={product.image}
               alt={product.title}
-              className="h-[600px] md:h-[400px] w-full object-fill"
+              className="h-[600px] md:h-[400px] w-full object-fill rounded-md"
             />
           </article>
           <article className="flex flex-col gap-6 flex-1 text-xs">
