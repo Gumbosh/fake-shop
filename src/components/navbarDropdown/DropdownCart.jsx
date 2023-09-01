@@ -50,7 +50,7 @@ const DropdownCart = () => {
           <h3 className="text-2xl italic font-bold mb-5 text-custom_important_text">
             Shopping Cart
           </h3>
-          <section className="max-h-[228px] overflow-y-auto overflow-x-hidden">
+          <section className="max-h-[234px] overflow-y-auto overflow-x-hidden">
             {cart.cartItems.map((item) => (
               <section key={item.id} className="flex gap-2 text-xs mb-5">
                 <Link onClick={closeDropdownHandler} to={`/product/${item.id}`}>
