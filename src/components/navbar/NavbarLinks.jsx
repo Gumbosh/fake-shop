@@ -14,18 +14,26 @@ const NavbarLinks = () => {
 
   return (
     <>
-      <Link to="/products/men" onClick={closeDropdownHandler}>
-        <li>MEN</li>
-      </Link>
-      <Link to="/products/women" onClick={closeDropdownHandler}>
-        <li>WOMEN</li>
-      </Link>
-      <Link to="/products/jewelery" onClick={closeDropdownHandler}>
-        <li>JEWELERY</li>
-      </Link>
-      <Link to="/products/electronics" onClick={closeDropdownHandler}>
-        <li>ELECTRONICS</li>
-      </Link>
+      <li>
+        <Link to="/products/men" onClick={closeDropdownHandler}>
+          MEN
+        </Link>
+      </li>
+      <li>
+        <Link to="/products/women" onClick={closeDropdownHandler}>
+          WOMEN
+        </Link>
+      </li>
+      <li>
+        <Link to="/products/jewelery" onClick={closeDropdownHandler}>
+          JEWELERY
+        </Link>
+      </li>
+      <li>
+        <Link to="/products/electronics" onClick={closeDropdownHandler}>
+          ELECTRONICS
+        </Link>
+      </li>
     </>
   );
 };

@@ -5,12 +5,7 @@ const ImageCard = ({ linkTo, image, alt, title, description }) => {
   return (
     <article className="flex-1">
       <Link to={linkTo}>
-        <img
-          src={image}
-          alt={alt}
-          loading="lazy"
-          className="h-[600px] w-full object-cover"
-        />
+        <img src={image} alt={alt} className="h-[600px] w-full object-cover" />
       </Link>
       <section className="flex flex-col mt-2">
         <h3 className="font-bold text-custom_important_text">{title}</h3>
