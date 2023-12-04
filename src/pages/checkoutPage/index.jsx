@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const CheckoutPage = () => {
   return (
     <PageLayout>
-      <main className="text-custom_important_text text-center flex flex-col items-center gap-5">
+      <main className="text-center flex flex-col items-center gap-5">
         <h2 className="font-bold text-2xl">Thank You For Your Order</h2>
         <p className="text-sm">
           Your order has been placed and is being processed. You will recive an

@@ -35,7 +35,7 @@ const DropdownCart = () => {
   return (
     <DropdownTemplate>
       {cart.cartItems.length === 0 ? (
-        <section className="flex flex-col items-center gap-2.5 text-custom_important_text">
+        <section className="flex flex-col items-center gap-2.5">
           <h3 className="font-bold italic text-2xl">Your cart is empty</h3>
           <Link
             to={"/products"}
@@ -47,7 +47,7 @@ const DropdownCart = () => {
         </section>
       ) : (
         <section>
-          <h3 className="text-2xl italic font-bold mb-5 text-custom_important_text">
+          <h3 className="text-2xl font-bold mb-5">
             Shopping Cart
           </h3>
           <section className="max-h-[234px] overflow-y-auto overflow-x-hidden">
@@ -61,7 +61,7 @@ const DropdownCart = () => {
                   />
                 </Link>
                 <div className="w-full">
-                  <div className="flex md:gap-2.5 text-custom_important_text font-bold ">
+                  <div className="flex md:gap-2.5 font-bold ">
                     <Link
                       to={`/product/${item.id}`}
                       onClick={closeDropdownHandler}
@@ -88,7 +88,7 @@ const DropdownCart = () => {
               </section>
             ))}
           </section>
-          <h4 className="mb-6 font-bold text-sm text-custom_important_text">
+          <h4 className="mb-6 font-bold text-sm">
             TOTAL: ${cart.cartTotalAmount}
           </h4>
           <Link

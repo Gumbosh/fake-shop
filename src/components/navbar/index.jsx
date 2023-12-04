@@ -10,11 +10,11 @@ const Navbar = () => {
           {/* Page logo linked to the main page. */}
           <NavbarLogo />
         </section>
-        <ul className="lg:hidden ml-5 flex gap-10 items-center text-sm text-custom_important_text">
+        <ul className="lg:hidden ml-5 flex gap-10 items-center text-sm">
           {/* Links to subpages. */}
           <NavbarLinks />
         </ul>
-        <ul className="ml-auto mr-5 flex items-center gap-2.5 text-custom_important_text">
+        <ul className="ml-auto mr-5 flex items-center gap-2.5">
           {/* Icons that render dropdown content on click. */}
           <NavbarIcons />
         </ul>

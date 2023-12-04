@@ -29,7 +29,7 @@ function CartPage() {
   return (
     <PageContent>
       {cart.cartItems.length === 0 ? (
-        <section className="flex flex-col items-center gap-2.5 text-custom_important_text">
+        <section className="flex flex-col items-center gap-2.5">
           <h3 className="font-bold italic text-2xl">Your cart is empty</h3>
           <Link
             to={"/products"}
@@ -40,7 +40,7 @@ function CartPage() {
         </section>
       ) : (
         <section>
-          <h3 className="mb-5 text-2xl italic font-bold text-custom_important_text">
+          <h3 className="mb-5 text-2xl italic font-bold">
             Shopping Cart
           </h3>
           <section>
@@ -54,7 +54,7 @@ function CartPage() {
                   />
                 </Link>
                 <div className="w-full">
-                  <div className="flex md:gap-2.5 text-custom_important_text font-bold ">
+                  <div className="flex md:gap-2.5 font-bold ">
                     <Link to={`/product/${item.id}`} className="md:w-2/3">
                       <p className="truncate">{item.title}</p>
                     </Link>
@@ -77,7 +77,7 @@ function CartPage() {
               </section>
             ))}
           </section>
-          <h4 className="mb-6 font-bold text-sm text-custom_important_text">
+          <h4 className="mb-6 font-bold text-sm">
             TOTAL: ${cart.cartTotalAmount}
           </h4>
           <Link

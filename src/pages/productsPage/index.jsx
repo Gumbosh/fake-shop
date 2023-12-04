@@ -46,7 +46,7 @@ const ProductsPage = () => {
   return (
     <PageContent>
       <section className="flex flex-col items-center">
-        <h2 className="text-center text-custom_important_text mb-5 text-2xl italic font-bold capitalize">
+        <h2 className="text-center mb-5 text-2xl italic font-bold capitalize">
           {productsCategory}
         </h2>
         {isLoading ? (
@@ -59,10 +59,10 @@ const ProductsPage = () => {
                   <ProductCard key={item.id} product={item} />
                 </article>
                 <article className="text-xs flex flex-col gap-1 my-2">
-                  <p className="text-custom_placeholder_text text-[0.5rem] uppercase">
+                  <p className="text-[0.5rem] uppercase">
                     {item.category}
                   </p>
-                  <h3 className="font-bold text-custom_important_text">
+                  <h3 className="font-bold">
                     {item.title}
                   </h3>
                   <p>${item.price.toFixed(2)}</p>

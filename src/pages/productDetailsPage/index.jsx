@@ -47,22 +47,22 @@ const ProductDetailsPage = () => {
             />
           </article>
           <article className="flex flex-col gap-6 flex-1 text-xs">
-            <h2 className="font-bold text-xl italic text-custom_important_text">
+            <h2 className="font-bold text-xl italic">
               {product.title}
             </h2>
             <p className="text-sm">
-              <span className="font-bold text-custom_important_text">
+              <span className="font-bold">
                 DESCRIPTION:{" "}
               </span>
               <span>{product.description}</span>
             </p>
             <p>
-              <span className="font-bold text-custom_important_text">
+              <span className="font-bold">
                 CATEGORY:{" "}
               </span>
               <span className="capitalize">{product.category}</span>
             </p>
-            <p className="font-bold text-lg text-custom_important_text">
+            <p className="font-bold text-lg">
               {`$${product.price.toFixed(2)}`}
             </p>
 
