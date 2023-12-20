@@ -72,9 +72,10 @@ export default {
           900: "#f7f2ef",
           1000: "#FCFAF9",
         },
-        custom_important_text: "#33332E",
-        custom_normal_text: "#43433D",
         custom_placeholder_text: "#43433D99",
+      },
+      fontFamily: {
+        Lato: ["Lato", "monospace", "sans-serif"],
       },
     },
   },

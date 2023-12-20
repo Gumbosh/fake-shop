@@ -29,14 +29,14 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="flex flex-col m-auto bg-custom_champagne_pink shadow-lg w-3/4 p-5 mb-20">
+    <section className="flex flex-col m-auto bg-custom_champagne_pink shadow-lg w-4/5 p-5 mb-20">
       {!submitted ? (
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <label htmlFor="email" className="md:text-center">
-            <h4 className="font-bold text-lg text-custom_important_text">
+            <h4 className="font-bold text-lg md:text-md">
               Get an Exclusive 15% Discount!
             </h4>
-            <p className="text-xs block">
+            <p className="text-sm block md:text-xs">
               Unlock Your 15% Discount by Subscribing to Our Newsletter
             </p>
           </label>
@@ -45,20 +45,20 @@ const NewsletterSection = () => {
               type="email"
               name="email"
               placeholder="Enter email address"
-              className="py-1.5 px-2 w-3/4 md:w-full bg-custom_linen placeholder-custom_placeholder_text focus:outline-none text-custom_important_text"
+              className="bg-custom_linen placeholder-custom_placeholder_text border border-black py-1.5 px-2 mr-4 md:mr-0 w-3/4 md:w-full focus:outline-none"
               {...register("email")}
               onFocus={() => setFocusedField("email")}
               onBlur={() => setFocusedField(null)}
             />
             <button
               type="submit"
-              className="text-custom_important_text bg-custom_pale_dogwood px-2 py-1.5 w-1/4 md:w-1/2 sm:w-full md:mt-2 hover:bg-custom_pale_dogwood-90 focus:bg-custom_pale_dogwood"
+              className="bg-custom_pale_dogwood hover:bg-custom_pale_dogwood-600 border border-black px-2 py-1.5 w-1/4 md:w-2/5 sm:w-3/4 md:mt-2"
             >
-              Sign Up
+              SIGN UP
             </button>
           </section>
           {focusedField === "email" && errors.email && (
-            <p className="text-red-500 text-xs mt-1 md:text-center">
+            <p className="text-red-500 text-sm mt-1 md:text-center">
               {errors.email.message}
             </p>
           )}
@@ -68,7 +68,7 @@ const NewsletterSection = () => {
           <h4 className="text-green-600 text-lg font-bold">
             Thank you for subscribing!
           </h4>
-          <p className="text-custom_important_text mt-2">
+          <p className="mt-2">
             You have unlocked an exclusive 15% discount. Check your email for
             details.
           </p>

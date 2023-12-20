@@ -26,7 +26,7 @@ const ProductDetailsPage = () => {
   if (!isLoading && !product) {
     return (
       <PageContent>
-        <h2 className="text-center text-2xl italic font-bold">
+        <h2 className="text-center text-2xl font-bold">
           {`There is no item with id: ${id}`}
         </h2>
       </PageContent>
@@ -43,31 +43,25 @@ const ProductDetailsPage = () => {
             <img
               src={product.image}
               alt={product.title}
-              className="h-[600px] md:h-[400px] w-full object-fill rounded-md"
+              className="h-[600px] md:h-[400px] w-full object-fill"
             />
           </article>
           <article className="flex flex-col gap-6 flex-1 text-xs">
-            <h2 className="font-bold text-xl italic text-custom_important_text">
-              {product.title}
-            </h2>
+            <h2 className="font-bold text-2xl">{product.title}</h2>
+            <p className="text-base">
+              <span className="font-bold">Description: </span>
+              <span className="">{product.description}</span>
+            </p>
             <p className="text-sm">
-              <span className="font-bold text-custom_important_text">
-                DESCRIPTION:{" "}
-              </span>
-              <span>{product.description}</span>
+              <span className="font-bold">Category: </span>
+              <span className="uppercase">{product.category}</span>
             </p>
-            <p>
-              <span className="font-bold text-custom_important_text">
-                CATEGORY:{" "}
-              </span>
-              <span className="capitalize">{product.category}</span>
-            </p>
-            <p className="font-bold text-lg text-custom_important_text">
+            <p className="font-bold text-xl">
               {`$${product.price.toFixed(2)}`}
             </p>
 
             <button
-              className="text-base italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood py-2"
+              className="bg-custom_pale_dogwood hover:bg-custom_pale_dogwood-600 border border-black text-lg font-semibold md:w-full w-3/4 py-2"
               onClick={() => handleAddToCart(product)}
             >
               Add To Cart

@@ -16,7 +16,7 @@ const NavbarLogo = () => {
     <>
       <Link to="/" onClick={closeDropdownHandler}>
         <h1 className="text-md">
-          <b className="text-custom_important_text">Fake</b>Shop
+          <span className="font-bold">Fake</span>Shop
         </h1>
       </Link>
     </>
