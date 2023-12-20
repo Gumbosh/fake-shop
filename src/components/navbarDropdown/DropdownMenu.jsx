@@ -21,7 +21,7 @@ const DropdownMenu = () => {
       >
         <CiCircleRemove className="text-[28px]" />
       </button>
-      <ul className="flex flex-col items-center pt-10 gap-10">
+      <ul className="flex flex-col items-center pt-10 gap-10 text-xl">
         <NavbarLinks />
       </ul>
     </section>

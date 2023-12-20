@@ -29,23 +29,21 @@ function CartPage() {
   return (
     <PageContent>
       {cart.cartItems.length === 0 ? (
-        <section className="flex flex-col items-center gap-2.5">
-          <h3 className="font-bold italic text-2xl">Your cart is empty</h3>
+        <section className="flex flex-col items-center gap-5">
+          <h3 className="font-bold text-3xl">Your cart is empty</h3>
           <Link
             to={"/products"}
-            className="text-md italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood px-6 py-2"
+            className="bg-custom_pale_dogwood hover:bg-custom_pale_dogwood-600 border border-black font-semibold text-base px-6 py-2"
           >
             Start Shopping
           </Link>
         </section>
       ) : (
         <section>
-          <h3 className="mb-5 text-2xl italic font-bold">
-            Shopping Cart
-          </h3>
+          <h3 className="mb-5 text-3xl font-bold">Shopping Cart</h3>
           <section>
             {cart.cartItems.map((item) => (
-              <section key={item.id} className="flex gap-2 text-xs mb-5">
+              <section key={item.id} className="flex gap-2 text-sm mb-5">
                 <Link to={`/product/${item.id}`}>
                   <img
                     src={item.image}
@@ -54,7 +52,7 @@ function CartPage() {
                   />
                 </Link>
                 <div className="w-full">
-                  <div className="flex md:gap-2.5 font-bold ">
+                  <div className="flex md:gap-2.5 font-bold">
                     <Link to={`/product/${item.id}`} className="md:w-2/3">
                       <p className="truncate">{item.title}</p>
                     </Link>
@@ -67,7 +65,7 @@ function CartPage() {
                   </div>
                   <div className="flex gap-2 text-base items-center">
                     <button onClick={() => decreaseCartHandler(item)}>-</button>
-                    <p className="text-xs">{item.cartQuantity}</p>
+                    <p className="text-sm">{item.cartQuantity}</p>
                     <button onClick={() => increaseQuantityHandler(item)}>
                       +
                     </button>
@@ -77,13 +75,13 @@ function CartPage() {
               </section>
             ))}
           </section>
-          <h4 className="mb-6 font-bold text-sm">
-            TOTAL: ${cart.cartTotalAmount}
+          <h4 className="mb-6 font-bold text-base">
+            Total: ${cart.cartTotalAmount}
           </h4>
           <Link
             to="/cart/checkout"
             onClick={() => clearCartHandler()}
-            className="text-lg italic text-custom_pale_dogwood-1000 shadow-sm rounded-md bg-gradient-to-br from-custom_pale_dogwood-400 to-custom_pale_dogwood px-6 py-2"
+            className="bg-custom_pale_dogwood hover:bg-custom_pale_dogwood-600 border border-black font-semibold text-base px-6 py-2"
           >
             Proceed to Checkout
           </Link>

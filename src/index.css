@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 #root {
-  @apply bg-custom_linen font-Lato mt-12;
+  @apply font-Lato mt-12;
+}
+
+body {
+  @apply bg-custom_linen;
 }

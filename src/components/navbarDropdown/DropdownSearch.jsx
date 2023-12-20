@@ -73,11 +73,11 @@ const DropdownSearch = () => {
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Search"
-          className="bg-custom_linen placeholder-custom_placeholder_text focus:outline-none"
+          className="bg-custom_linen placeholder-custom_placeholder_text focus:outline-none text-xl"
           ref={inputRef}
         />
       </form>
-      <ul className="flex flex-col gap-2.5 mt-5 md:text-sm">
+      <ul className="flex flex-col gap-2.5 mt-5 md:text-base">
         {inputValue.trim() !== "" &&
           results.slice(0, 3).map((item) => (
             <li key={item.id}>
