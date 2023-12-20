@@ -29,11 +29,11 @@ const NewsletterSection = () => {
   };
 
   return (
-    <section className="flex flex-col m-auto bg-custom_champagne_pink shadow-lg w-4/5 p-5 mb-20">
+    <section className="flex flex-col m-auto bg-custom_champagne_pink shadow-lg w-full p-5 mb-20">
       {!submitted ? (
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <label htmlFor="email" className="md:text-center">
-            <h4 className="font-bold text-lg md:text-md">
+            <h4 className="font-bold text-base md:text-md">
               Get an Exclusive 15% Discount!
             </h4>
             <p className="text-sm block md:text-xs">
@@ -52,7 +52,7 @@ const NewsletterSection = () => {
             />
             <button
               type="submit"
-              className="bg-custom_pale_dogwood hover:bg-custom_pale_dogwood-600 border border-black px-2 py-1.5 w-1/4 md:w-2/5 sm:w-3/4 md:mt-2"
+              className="bg-custom_pale_dogwood hover:bg-custom_pale_dogwood-600 border border-black font-semibold px-2 py-1.5 w-1/4 md:w-2/5 sm:w-3/4 md:mt-2"
             >
               SIGN UP
             </button>
