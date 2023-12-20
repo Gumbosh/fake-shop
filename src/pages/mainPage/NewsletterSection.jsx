@@ -33,7 +33,7 @@ const NewsletterSection = () => {
       {!submitted ? (
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <label htmlFor="email" className="md:text-center">
-            <h4 className="font-bold text-base md:text-md">
+            <h4 className="font-bold text-xl md:text-lg sm:text-base md:text-md">
               Get an Exclusive 15% Discount!
             </h4>
             <p className="text-sm block md:text-xs">
