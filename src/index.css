@@ -5,7 +5,3 @@
 #root {
   @apply font-Lato mt-12;
 }
-
-body {
-  @apply bg-custom_linen;
-}
